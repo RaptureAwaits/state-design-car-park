@@ -42,7 +42,7 @@ class CarPark:
         self.spaces["X"].state = LeaveState()  # Sets the additional space's state to a special state that will discard the current car
 
     def print_space_array(self):  # Displays the states of all spaces to the user
-        print("Spaces:\n")
+        print("\nSpaces:")
         for key, space in self.spaces.items():
             print(f"{key}: {space.to_string()}")
 
@@ -58,7 +58,7 @@ class CarPark:
                 user_input = get_user_input("Please enter a space for this car to park in: ")
 
                 if user_input.upper() in self.spaces:
-                    space_input = user_input
+                    space_input = user_input.upper()
                 else:
                     print("Please enter a valid space number...\n")
 
